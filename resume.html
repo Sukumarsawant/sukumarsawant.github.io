@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sukumar Sawant - Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Latin+Modern+Roman:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #000000;
+      --text: #1a1a1a;
+      --muted: #4b5563;
+      --accent: #ff5400;
+      --line: #cbd5e1;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #0f0f11;
+      color: var(--text);
+      font-family: 'Newsreader', 'Latin Modern Roman', 'Times New Roman', Georgia, serif;
+      line-height: 1.4;
+      padding: 40px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Floating Action Bar */
+    .action-bar {
+      position: fixed;
+      top: 20px;
+      display: flex;
+      gap: 12px;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(16px);
+      padding: 10px 20px;
+      border-radius: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      z-index: 100;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ff5400;
+      color: #000;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .action-btn:hover {
+      background: #ff7633;
+      transform: translateY(-1px);
+    }
+
+    .action-btn.secondary {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .action-btn.secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ff5400;
+    }
+
+    /* Paper Page Container */
+    .resume-page {
+      background: #ffffff;
+      width: 100%;
+      max-width: 850px;
+      min-height: 1100px;
+      padding: 48px 56px;
+      box-shadow: 0 15px 45px rgba(0,0,0,0.4);
+      margin-top: 40px;
+      border-radius: 4px;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: 32px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #000000;
+      margin-bottom: 6px;
+    }
+
+    .contacts {
+      font-family: 'Inter', sans-serif;
+      font-size: 13.5px;
+      color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .contacts a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .contacts a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #000;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #000;
+      padding-bottom: 2px;
+      margin-bottom: 8px;
+    }
+
+    .entry {
+      margin-bottom: 10px;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-weight: 700;
+      font-size: 15px;
+      color: #000;
+    }
+
+    .entry-sub {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 14px;
+      font-style: italic;
+      color: #333;
+      margin-bottom: 3px;
+    }
+
+    .entry-sub strong {
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .date-loc {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13.5px;
+      color: #333;
+      white-space: nowrap;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 18px;
+      margin-top: 2px;
+    }
+
+    li {
+      font-size: 13.5px;
+      color: #1a1a1a;
+      margin-bottom: 3px;
+      line-height: 1.35;
+      text-align: justify;
+    }
+
+    li a {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    li strong {
+      font-weight: 700;
+    }
+
+    .skills-block, .coursework-block {
+      font-size: 13.5px;
+      line-height: 1.45;
+    }
+
+    .skills-block p {
+      margin-bottom: 2px;
+    }
+
+    .coursework-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4px 12px;
+      font-size: 13.5px;
+      margin-top: 4px;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+      .action-bar {
+        display: none !important;
+      }
+      .resume-page {
+        box-shadow: none;
+        margin-top: 0;
+        padding: 24px 32px;
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .resume-page {
+        padding: 28px 20px;
+      }
+      .coursework-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="action-bar">
+    <a href="index.html" class="action-btn secondary">&larr; Back to Portfolio</a>
+    <button onclick="window.print()" class="action-btn">
+      <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/><path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z"/></svg>
+      Print / Save PDF
+    </button>
+  </div>
+
+  <main class="resume-page">
+    <header>
+      <h1>Sukumar Sawant</h1>
+      <div class="contacts">
+        <span>+(91) 8850544772</span>
+        <span>&bull;</span>
+        <a href="mailto:sawantsukumar@gmail.com">sawantsukumar@gmail.com</a>
+        <span>&bull;</span>
+        <a href="https://linkedin.com/in/sukumar-sawant" target="_blank" rel="noopener">linkedin.com/in/sukumar-sawant</a>
+        <span>&bull;</span>
+        <a href="https://github.com/sukumarsawant" target="_blank" rel="noopener">github.com/sukumarsawant</a>
+      </div>
+    </header>
+
+    <!-- Education -->
+    <section>
+      <h2>Education</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <span>Vidyalankar Institute of Technology</span>
+          <span class="date-loc">August 2024 &ndash; Present</span>
+        </div>
+        <div class="entry-sub">
+          <span>Bachelor of Technology in Computer Science, <strong>CGPA: 9.8</strong></span>
+          <span class="date-loc">Mumbai, Maharashtra</span>
+        </div>
+        <div class="entry-sub">
+          <span>Minor in Artificial Intelligence and Machine Learning</span>
+          <span></span>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="entry-header">
+          <span>D.G. Ruparel College</span>
+          <span class="date-loc">July 2021 &ndash; March 2023</span>
+        </div>
+        <div class="entry-sub">
+          <span>HSC - <strong>94% (Top 1%ile)</strong> &nbsp;|&nbsp; MHT-CET - <strong>97%ile</strong></span>
+          <span class="date-loc">Mumbai, Maharashtra</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section>
+      <h2>Experience</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <span>Google Summer of Code 2026 (GSoC)</span>
+          <span class="date-loc">May 2026 &ndash; August 2026</span>
+        </div>
+        <div class="entry-sub">
+          <span>LLVM Compiler Infrastructure</span>
+          <span class="date-loc">Remote</span>
+        </div>
+        <ul>
+          <li>Selected as a <strong>GSoC 2026 Contributor</strong> contributing to <strong>LLVM libc</strong>, enabling <strong>float80/float128</strong> math support through software emulation and making the types available across targets lacking native support, including AArch64, ARM, Windows/MSVC, and GPUs.</li>
+          <li>Created and integrated emulated float80/float128 types, fixed the ABI to enable consistent testing of emulated types against native platforms, and implemented/tested higher-order math functions, achieving up to <strong>1.5&times; faster performance</strong> than native implementations in benchmarks.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Open Source Contributions -->
+    <section>
+      <h2>Open Source Contributions</h2>
+      <ul>
+        <li><strong>LLVM libc:</strong> Contributing as a reviewer and committer, working on floating-point mathematics functions and emulated float80/float128 types.</li>
+        <li><strong>Google DeepMind:</strong> Learning and contributing to the Erd&odblac;s problems; contributed minor improvements to Mozilla and Supabase.</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2>Projects</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <span>Nexaware &nbsp;|&nbsp; <span style="font-weight: 400; font-size: 13.5px; font-style: italic;">React, JavaScript, Supabase, n8n, Apify, TailwindCSS</span></span>
+          <span class="date-loc">2025</span>
+        </div>
+        <ul>
+          <li>Built a full-stack web platform connecting local businesses and job seekers through job listings and applications.</li>
+          <li>Implemented Supabase authentication and database functionality for user accounts and job data.</li>
+          <li>Automated job-data collection using <strong>n8n workflows and Apify</strong>, including LinkedIn job scraping.</li>
+          <li>Developed a responsive frontend using React and TailwindCSS and deployed the application on Netlify.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="entry-header">
+          <span>Kuro CLI &nbsp;|&nbsp; <span style="font-weight: 400; font-size: 13.5px; font-style: italic;">Python, Gemini API, Tkinter, SpeechRecognition, pyttsx3</span></span>
+          <span class="date-loc">2025</span>
+        </div>
+        <ul>
+          <li>Built an AI-powered voice-controlled CLI assistant capable of understanding natural-language commands and executing system actions.</li>
+          <li>Integrated the <strong>Gemini API</strong> for natural-language understanding and command processing.</li>
+          <li>Implemented voice input and output using SpeechRecognition and pyttsx3.</li>
+          <li>Developed a Tkinter GUI for interactive demonstrations and a web-based live demo.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section>
+      <h2>Achievements</h2>
+      <ul>
+        <li><strong>Runner-up at TCS Hackathon 2026;</strong> 2x National Finalist at CodeUnCode'26 among 1200+ participants.</li>
+        <li>Solved <strong>1200+ programming problems</strong> across CodeChef, Codeforces, LeetCode, and other platforms.</li>
+        <li><strong>3 star at CodeChef</strong> &ndash; <strong>Pupil at Codeforces;</strong> Global Rank 70 in CodeChef Starters 189 (Division 3).</li>
+        <li>National Finalist at GDG VITM National-level Hackathon; Winner at Bug Auction and Stellar Quest.</li>
+      </ul>
+    </section>
+
+    <!-- Technical Skills -->
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills-block">
+        <p><strong>Languages:</strong> C/C++, Python, Java, JavaScript, SQL</p>
+        <p><strong>Developer Tools:</strong> Git/GitHub, VS Code, Postman, Godbolt, Sollya</p>
+        <p><strong>Technologies/Frameworks:</strong> React, Node.js, Tkinter, TailwindCSS, PyTorch</p>
+        <p><strong>Backend/Services:</strong> Supabase, Gemini API, n8n, Apify, REST APIs</p>
+      </div>
+    </section>
+
+    <!-- Relevant Coursework -->
+    <section>
+      <h2>Relevant Coursework</h2>
+      <div class="coursework-grid">
+        <div>&bull; Data Structures</div>
+        <div>&bull; Database Systems</div>
+        <div>&bull; Artificial Intelligence</div>
+        <div>&bull; Linear Algebra</div>
+        <div>&bull; Algorithms Analysis</div>
+        <div>&bull; Operating Systems</div>
+        <div>&bull; Compiler Design</div>
+        <div>&bull; Automata Theory</div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
