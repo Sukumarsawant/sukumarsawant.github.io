@@ -1,368 +1,283 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sukumar Sawant - Software Engineer & Systems Enthusiast specializing in Compilers, LLVM, C++, and AI/ML. GSoC '26 Contributor at LLVM Compiler Infrastructure." />
-  <meta name="author" content="Sukumar Sawant" />
-  <meta name="robots" content="index, follow" />
-  
-  <meta property="og:title" content="Sukumar Sawant - Software Engineer & Systems Portfolio" />
-  <meta property="og:description" content="GSoC '26 Contributor @ LLVM Compiler Infrastructure. C++, Compilers, Machine Learning, and Full-Stack development." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://sukumarsawant.github.io/" />
-
-  <title>Sukumar Sawant - Software Engineer | Compilers &amp; AI</title>
-  <link rel="stylesheet" href="style.css" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Sukumar Sawant",
-    "jobTitle": ["Software Engineer", "Open Source Developer", "GSoC Contributor"],
-    "description": "Software Engineer specializing in Compilers, LLVM, C++, AI/ML and Systems",
-    "url": "https://sukumarsawant.github.io/",
-    "sameAs": [
-      "https://linkedin.com/in/sukumar-sawant",
-      "https://github.com/sukumarsawant"
-    ],
-    "email": "sawantsukumar@gmail.com"
-  }
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sukumar Sawant</title>
+  <meta name="description" content="Portfolio of Sukumar Sawant — CS undergrad, GSoC '26 contributor at LLVM Compiler Infrastructure, and systems enthusiast based in Mumbai, India.">
+  <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-
 <body>
-  <div class="container">
-    <!-- Navigation Bar -->
-    <nav class="navbar" aria-label="Main navigation">
-      <div class="nameLink">@sukumarsawant</div>
-      <button type="button" class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-controls="navbarLinks" aria-expanded="false">
-        &#9776;
-      </button>
-      <div class="pageLinks" id="navbarLinks">
-        <a href="#skills">skills</a>
-        <a href="#experience">experience</a>
-        <a href="#projects">projects</a>
-        <a href="#opensource">oss</a>
-        <a href="#achievements">achievements</a>
-        <a href="#education">education</a>
-        <a href="#contact">connect</a>
-      </div>
-    </nav>
 
-    <main>
-      <!-- Hero / About Bento -->
-      <div class="about" id="about">
-        <div class="aboutSection">
-          <img class="myPic" alt="Sukumar Sawant - Developer Avatar" src="images/avatar.svg" width="220" height="220" />
-          <div class="fieldSection">
-            <h1>Sukumar Sawant.</h1>
-            <div class="fieldName">a software engineer.</div>
-          </div>
-        </div>
-        <div class="nameSection">
-          <div class="aboutHeading">ABOUT</div>
-          <span>systems &amp; code by day</span><br />
-          compiler tinkerer by night<br />
-          <span>
-            Curious and passionate <br />
-            about <i>Systems, Compilers &amp; AI</i>.
-          </span>
-        </div>
-      </div>
-
-      <!-- Quick Social / Links Bar -->
-      <div class="weblinks">
-        <a class="webLink webEmailLink" href="https://github.com/sukumarsawant" target="_blank" rel="noopener">resume.</a>
-        <a class="webLink" href="mailto:sawantsukumar@gmail.com">email.</a>
-        <a class="webLink" href="https://linkedin.com/in/sukumar-sawant" target="_blank" rel="noopener">linkedIn.</a>
-        <a class="webLink" href="https://github.com/sukumarsawant" target="_blank" rel="noopener">github.</a>
-        <a class="webLink" href="https://codechef.com/users/sukumarsawant" target="_blank" rel="noopener">codechef.</a>
-        <a class="webLink" href="https://codeforces.com/profile/sukumarsawant" target="_blank" rel="noopener">codeforces.</a>
-      </div>
-
-      <!-- Skills Bento Box -->
-      <div class="skills" id="skills">
-        <div class="skillSection">
-          <h2 class="skillHeader">Languages.</h2>
-          <div class="skillNameSection">
-            <div class="skillName">C / C++</div>
-            <div class="skillName">Python</div>
-            <div class="skillName">JavaScript</div>
-            <div class="skillName">Java &amp; SQL</div>
-          </div>
-        </div>
-        <div class="skillSection">
-          <h2 class="skillHeader">Systems &amp; Tools.</h2>
-          <div class="skillNameSection">
-            <div class="skillName">LLVM &amp; Godbolt</div>
-            <div class="skillName">Sollya &amp; IEEE-754</div>
-            <div class="skillName">Git / GitHub</div>
-            <div class="skillName">VS Code &amp; Postman</div>
-          </div>
-        </div>
-        <div class="skillSection">
-          <h2 class="skillHeader">Frameworks &amp; AI.</h2>
-          <div class="skillNameSection">
-            <div class="skillName">PyTorch</div>
-            <div class="skillName">Gemini API</div>
-            <div class="skillName">React &amp; Tailwind</div>
-            <div class="skillName">Supabase &amp; n8n</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Experience Section -->
-      <div class="experience" id="experience">
-        <div class="companySection">
-          <div class="companyDetails">
-            <div class="experienceheading">EXPERIENCE</div>
-            <div>
-              <div class="companyLogo">
-                <img src="images/llvm_logo.svg" alt="LLVM Compiler Infrastructure logo" loading="lazy" />
-              </div>
-              <h2 class="companyName">LLVM Compiler Infrastructure</h2>
-              <div class="companyPeriod">May 2026 – August 2026</div>
-              <div class="companySkills">
-                <div class="companySkillName">C++</div>
-                <div class="companySkillName">LLVM libc</div>
-                <div class="companySkillName">float80 / float128</div>
-                <div class="companySkillName">AArch64</div>
-                <div class="companySkillName">Math Emulation</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="experienceSection">
-          <div class="experienceItem">
-            <div class="experienceName">Google Summer of Code 2026 (GSoC) Contributor</div>
-            <div class="experienceDesc">
-              <p class="experienceLead">
-                Selected as a GSoC 2026 Contributor contributing to <strong>LLVM libc</strong>, enabling software emulation for extended floating-point types across multiple platforms.
-              </p>
-              <ul class="experienceHighlights">
-                <li>
-                  <a href="https://github.com/llvm/llvm-project" target="_blank" rel="noopener">LLVM libc float80/float128</a>
-                  <span>Enabled float80/float128 math support through software emulation, making these types available across targets lacking native hardware support including AArch64, ARM, Windows/MSVC, and GPUs.</span>
-                </li>
-                <li>
-                  <a href="https://github.com/llvm/llvm-project" target="_blank" rel="noopener">ABI &amp; Performance Benchmarks</a>
-                  <span>Created and integrated emulated float80/float128 types, fixed the ABI to enable consistent cross-platform testing against native systems, and implemented/tested higher-order math functions achieving up to <strong>1.5× faster performance</strong> than native implementations in benchmarks.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Projects Section -->
-      <div class="projects" id="projects">
-        <div class="projectCard">
-          <div>
-            <div class="aboutHeading">PROJECTS</div>
-            <h2 class="projectName">Nexaware.</h2>
-            <div class="projectTags">
-              <span class="projectTag">React</span>
-              <span class="projectTag">JavaScript</span>
-              <span class="projectTag">Supabase</span>
-              <span class="projectTag">n8n</span>
-              <span class="projectTag">Apify</span>
-              <span class="projectTag">TailwindCSS</span>
-            </div>
-            <div class="projectDesc">
-              A full-stack web platform connecting local businesses and job seekers through job listings and applications. Built Supabase authentication and database schemas for user accounts and live job data. Engineered automated job-data collection pipelines using n8n workflows and Apify (including automated LinkedIn scraping). Deployed responsive React UI with TailwindCSS.
-            </div>
-          </div>
-          <a href="https://github.com/sukumarsawant" target="_blank" rel="noopener" aria-label="Nexaware project link">
-            <img class="projectLink" src="images/linkArrow.svg" alt="External link" loading="lazy" />
-          </a>
-        </div>
-
-        <div class="projectCard">
-          <div>
-            <div class="aboutHeading">PROJECTS</div>
-            <h2 class="projectName">Kuro CLI.</h2>
-            <div class="projectTags">
-              <span class="projectTag">Python</span>
-              <span class="projectTag">Gemini API</span>
-              <span class="projectTag">Tkinter</span>
-              <span class="projectTag">SpeechRecognition</span>
-              <span class="projectTag">pyttsx3</span>
-            </div>
-            <div class="projectDesc">
-              An AI-powered voice-controlled CLI assistant capable of understanding natural-language commands and executing automated system actions. Integrated Google's Gemini API for natural-language understanding and command synthesis, with voice input/output via SpeechRecognition and pyttsx3, alongside an interactive Tkinter GUI and live demo.
-            </div>
-          </div>
-          <a href="https://github.com/sukumarsawant" target="_blank" rel="noopener" aria-label="Kuro CLI project link">
-            <img class="projectLink" src="images/linkArrow.svg" alt="External link" loading="lazy" />
-          </a>
-        </div>
-      </div>
-
-      <!-- Open Source Contributions Section -->
-      <div class="ossHeader" id="opensource">
-        <div>
-          <div class="aboutHeading">OPEN SOURCE</div>
-          <div class="blogsTitle">
-            <span>Building in the open: <span class="blogsDesc">reviewer, committer, and active contributor to core compiler toolchains, algorithms, and developer tools.</span></span>
-          </div>
-        </div>
-        <a href="https://github.com/sukumarsawant" target="_blank" rel="noopener" class="blogsMore">github &rarr;</a>
-      </div>
-
-      <div class="ossToolbar">
-        <div class="ossSortBlock">
-          <div class="ossSortLabel">Sort by</div>
-          <div class="ossSort" role="group" aria-label="Sort contributions">
-            <button type="button" class="ossSortBtn is-active" data-oss-sort="default" aria-pressed="true">Category</button>
-            <button type="button" class="ossSortBtn" data-oss-sort="stars" aria-pressed="false">Stars</button>
-            <button type="button" class="ossSortBtn" data-oss-sort="prs" aria-pressed="false">Contributions</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="oss" id="oss">
-        <!-- Compilers & Low Level Systems Category -->
-        <div class="ossCategory">
-          <div class="ossCategoryName">Compilers, Systems &amp; Math</div>
-          <div class="ossList">
-            <a href="https://github.com/llvm/llvm-project" target="_blank" rel="noopener" class="ossItem" data-prs="18" data-stars="32000">
-              <img class="ossLogo" src="images/oss/llvm.svg" alt="" loading="lazy" />
-              <div class="ossItemMain">
-                <div class="ossRepo">llvm/llvm-project</div>
-                <div class="ossDesc">Reviewer &amp; committer on LLVM libc floating-point math functions &amp; float80/float128 types</div>
-              </div>
-              <div class="ossMeta">Committer · 32k stars</div>
-              <img class="ossArrow" src="images/linkArrow.svg" alt="" loading="lazy" />
-            </a>
-            <a href="https://github.com/google-deepmind" target="_blank" rel="noopener" class="ossItem" data-prs="6" data-stars="24000">
-              <img class="ossLogo" src="images/oss/deepmind.svg" alt="" loading="lazy" />
-              <div class="ossItemMain">
-                <div class="ossRepo">google-deepmind/erdos-problems</div>
-                <div class="ossDesc">Contributing mathematical formulations and computational verification for Erdős problems</div>
-              </div>
-              <div class="ossMeta">6 PRs · 24k stars</div>
-              <img class="ossArrow" src="images/linkArrow.svg" alt="" loading="lazy" />
-            </a>
-          </div>
-        </div>
-
-        <!-- Web & Developer Tools Category -->
-        <div class="ossCategory">
-          <div class="ossCategoryName">Developer Tools &amp; Ecosystem</div>
-          <div class="ossList">
-            <a href="https://github.com/supabase/supabase" target="_blank" rel="noopener" class="ossItem" data-prs="4" data-stars="76000">
-              <img class="ossLogo" src="images/oss/supabase.svg" alt="" loading="lazy" />
-              <div class="ossItemMain">
-                <div class="ossRepo">supabase/supabase</div>
-                <div class="ossDesc">Open-source Firebase alternative: database utilities, fixes and developer improvements</div>
-              </div>
-              <div class="ossMeta">4 PRs · 76k stars</div>
-              <img class="ossArrow" src="images/linkArrow.svg" alt="" loading="lazy" />
-            </a>
-            <a href="https://github.com/mozilla" target="_blank" rel="noopener" class="ossItem" data-prs="3" data-stars="12000">
-              <img class="ossLogo" src="images/oss/mozilla.svg" alt="" loading="lazy" />
-              <div class="ossItemMain">
-                <div class="ossRepo">mozilla/gecko-dev</div>
-                <div class="ossDesc">Contributed open-source patches and improvements to Mozilla tooling</div>
-              </div>
-              <div class="ossMeta">3 PRs · 12k stars</div>
-              <img class="ossArrow" src="images/linkArrow.svg" alt="" loading="lazy" />
-            </a>
-            <a href="https://github.com/google-gemini" target="_blank" rel="noopener" class="ossItem" data-prs="5" data-stars="15000">
-              <img class="ossLogo" src="images/oss/gemini.svg" alt="" loading="lazy" />
-              <div class="ossItemMain">
-                <div class="ossRepo">google/gemini-api</div>
-                <div class="ossDesc">CLI tooling, voice assistance integration and multi-turn workflows</div>
-              </div>
-              <div class="ossMeta">5 PRs · 15k stars</div>
-              <img class="ossArrow" src="images/linkArrow.svg" alt="" loading="lazy" />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Achievements Bento -->
-      <div class="ossHeader" id="achievements">
-        <div>
-          <div class="aboutHeading">ACHIEVEMENTS</div>
-          <div class="blogsTitle">
-            <span>Competitions &amp; Milestones: <span class="blogsDesc">hackathon podiums, competitive programming ratings, and algorithmic problem solving.</span></span>
-          </div>
-        </div>
-      </div>
-
-      <div class="achievements">
-        <div class="achievementCard">
-          <div class="achievementBadge">Hackathon Podium</div>
-          <div class="achievementTitle">Runner-up at TCS Hackathon 2026</div>
-          <div class="achievementDesc">2x National Finalist at CodeUnCode'26 among 1,200+ competitive participant teams across India.</div>
-        </div>
-        <div class="achievementCard">
-          <div class="achievementBadge">Competitive Programming</div>
-          <div class="achievementTitle">1200+ Problems Solved</div>
-          <div class="achievementDesc">Active across CodeChef, Codeforces, LeetCode, and international algorithm contests.</div>
-        </div>
-        <div class="achievementCard">
-          <div class="achievementBadge">Rankings</div>
-          <div class="achievementTitle">Global Rank 70 &bull; CodeChef Starters 189</div>
-          <div class="achievementDesc">3-Star coder at CodeChef &bull; Pupil at Codeforces in Division 3 / Global contests.</div>
-        </div>
-        <div class="achievementCard">
-          <div class="achievementBadge">National Contests</div>
-          <div class="achievementTitle">Winner &bull; Bug Auction &amp; Stellar Quest</div>
-          <div class="achievementDesc">National Finalist at GDG VITM National-level Hackathon.</div>
-        </div>
-      </div>
-
-      <!-- Education Bento -->
-      <div class="ossHeader" id="education">
-        <div>
-          <div class="aboutHeading">EDUCATION</div>
-          <div class="blogsTitle">
-            <span>Academic Background &amp; Core Coursework</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="educationGrid">
-        <div class="eduCard">
-          <div class="eduSchool">Vidyalankar Institute of Technology</div>
-          <div class="eduDegree">Bachelor of Technology in Computer Science</div>
-          <div class="eduGrade">Minor in AI &amp; ML &bull; CGPA: 9.8 / 10.0</div>
-          <div class="eduPeriod">August 2024 – Present | Mumbai, Maharashtra</div>
-        </div>
-        <div class="eduCard">
-          <div class="eduSchool">D.G. Ruparel College</div>
-          <div class="eduDegree">Higher Secondary Certificate (HSC)</div>
-          <div class="eduGrade">HSC: 94% (Top 1%ile) &bull; MHT-CET: 97%ile</div>
-          <div class="eduPeriod">July 2021 – March 2023 | Mumbai, Maharashtra</div>
-        </div>
-      </div>
-
-      <!-- Contact Bento -->
-      <div class="contact" id="contact">
-        <h2 class="contactName">Let's connect.</h2>
-        <a class="contactButton" href="mailto:sawantsukumar@gmail.com">
-          sawantsukumar@gmail.com
-        </a>
-        <div class="contactEmail">
-          Find me on <a href="https://linkedin.com/in/sukumar-sawant" target="_blank" rel="noopener">LinkedIn</a> &bull; <a href="https://github.com/sukumarsawant" target="_blank" rel="noopener">GitHub</a> &bull; Phone: +(91) 8850544772
-        </div>
-      </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="nameLink">Sukumar Sawant.</div>
-      <a class="easterEgg" title="here's a gift for you." href="https://github.com/sukumarsawant" target="_blank" rel="noopener">
-        built with passion &bull; all rights reserved &copy; 2026
+  <!-- Sticky Header -->
+  <header>
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <div class="logo-badge">SS</div>
+        <span>sukumarsawant</span>
       </a>
-      <div class="footerRight">Mumbai, India</div>
-    </footer>
-  </div>
+      <nav>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#opensource" class="nav-link">OSS</a>
+        <a href="resume.html" target="_blank" class="nav-link">Resume</a>
+        <div class="nav-socials">
+          <a href="https://github.com/sukumarsawant" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/sukumar-sawant" target="_blank" rel="noopener" class="icon-link" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="about">
+    <!-- Intro Hero -->
+    <div class="hero">
+      <div class="arabic-header">~/sukumar &gt; whoami</div>
+      <h1 class="title">Hey, I'm <span>Sukumar Sawant</span>.</h1>
+      <p class="intro-text">
+        I am a Computer Science undergraduate (Minor in AI/ML, CGPA: 9.8) at <strong>Vidyalankar Institute of Technology</strong>, Mumbai. I am deeply interested in <strong>compilers, low-level systems, floating-point math emulation, and applied AI</strong>.
+      </p>
+      <p class="intro-text">
+        Currently, I am a <strong>Google Summer of Code (GSoC 2026) Contributor</strong> and committer for <a href="https://github.com/llvm/llvm-project" target="_blank" rel="noopener">LLVM libc</a>, enabling software emulation for extended precision floating-point types across multiple architectures.
+      </p>
+
+      <div class="hero-media">
+        <img src="images/avatar.png" alt="Sukumar Sawant profile silhouette" />
+      </div>
+    </div>
+
+    <hr class="hr-divider">
+
+    <!-- Experience Section -->
+    <section id="experience">
+      <h2 class="section-title">Experience &amp; GSoC</h2>
+      
+      <div class="exp-card">
+        <div class="exp-header">
+          <span class="exp-role">Google Summer of Code 2026 (GSoC) Contributor</span>
+          <span class="exp-period">May 2026 – Aug 2026</span>
+        </div>
+        <div class="exp-org">LLVM Compiler Infrastructure (Remote)</div>
+        <p class="exp-desc">
+          Selected to contribute to <strong>LLVM libc</strong>, enabling software emulation for <code>float80</code> and <code>float128</code> math support across platforms lacking hardware capabilities.
+        </p>
+        <ul class="exp-bullets">
+          <li>Enabled software-emulated extended floating-point math support across AArch64, ARM, Windows/MSVC, and GPUs.</li>
+          <li>Created and integrated emulated types, resolved ABI testing disparities against native platforms, and implemented higher-order math functions achieving up to <strong>1.5× speedup</strong> over native baselines in benchmarks.</li>
+        </ul>
+        <div class="tag-list">
+          <span class="tag">C++</span>
+          <span class="tag">LLVM libc</span>
+          <span class="tag">Compiler Design</span>
+          <span class="tag">float80 / float128</span>
+          <span class="tag">IEEE-754</span>
+          <span class="tag">AArch64</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Open Source Contributions -->
+    <section id="opensource">
+      <h2 class="section-title">Open Source Contributions</h2>
+      <div class="oss-list">
+        <a href="https://github.com/llvm/llvm-project" target="_blank" rel="noopener" class="oss-row">
+          <div class="oss-left">
+            <span class="oss-name">llvm / llvm-project</span>
+            <span class="oss-desc">Reviewer &amp; committer on LLVM libc floating-point math functions and emulated float80/float128 types</span>
+          </div>
+          <span class="oss-meta">Committer &bull; 32k &star;</span>
+        </a>
+
+        <a href="https://github.com/google-deepmind" target="_blank" rel="noopener" class="oss-row">
+          <div class="oss-left">
+            <span class="oss-name">google-deepmind / erdos-problems</span>
+            <span class="oss-desc">Formulations, verification algorithms, and computational learning for Erdős problems</span>
+          </div>
+          <span class="oss-meta">6 PRs &bull; 24k &star;</span>
+        </a>
+
+        <a href="https://github.com/supabase/supabase" target="_blank" rel="noopener" class="oss-row">
+          <div class="oss-left">
+            <span class="oss-name">supabase / supabase</span>
+            <span class="oss-desc">Contributed open-source database developer tooling fixes and improvements</span>
+          </div>
+          <span class="oss-meta">4 PRs &bull; 76k &star;</span>
+        </a>
+
+        <a href="https://github.com/mozilla" target="_blank" rel="noopener" class="oss-row">
+          <div class="oss-left">
+            <span class="oss-name">mozilla / gecko-dev</span>
+            <span class="oss-desc">Patches and improvements to Mozilla tooling ecosystem</span>
+          </div>
+          <span class="oss-meta">3 PRs &bull; 12k &star;</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+        <div class="project-item">
+          <div class="project-item-top">
+            <span class="project-name">
+              Nexaware
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </span>
+            <span class="project-year">2025</span>
+          </div>
+          <p class="project-desc">
+            A full-stack web platform connecting local businesses and job seekers. Features Supabase authentication, automated LinkedIn job scraping via n8n workflows and Apify, and a responsive React + TailwindCSS interface.
+          </p>
+          <div class="tag-list">
+            <span class="tag">React</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">n8n</span>
+            <span class="tag">Apify</span>
+            <span class="tag">TailwindCSS</span>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-item-top">
+            <span class="project-name">
+              Kuro CLI
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </span>
+            <span class="project-year">2025</span>
+          </div>
+          <p class="project-desc">
+            AI-powered voice-controlled CLI assistant capable of natural-language command execution and automated workflows. Powered by Google's Gemini API with voice recognition and interactive GUI.
+          </p>
+          <div class="tag-list">
+            <span class="tag">Python</span>
+            <span class="tag">Gemini API</span>
+            <span class="tag">SpeechRecognition</span>
+            <span class="tag">pyttsx3</span>
+            <span class="tag">Tkinter</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements">
+      <h2 class="section-title">Achievements</h2>
+      <div class="achieve-list">
+        <div class="achieve-item">
+          <span class="achieve-icon">🏆</span>
+          <div class="achieve-text">
+            <strong>Runner-up at TCS Hackathon 2026</strong> &bull; 2x National Finalist at CodeUnCode'26 among 1,200+ participants.
+          </div>
+        </div>
+        <div class="achieve-item">
+          <span class="achieve-icon">⚡</span>
+          <div class="achieve-text">
+            <strong>1200+ Programming Problems Solved</strong> across CodeChef, Codeforces, LeetCode, and algorithmic platforms.
+          </div>
+        </div>
+        <div class="achieve-item">
+          <span class="achieve-icon">🌟</span>
+          <div class="achieve-text">
+            <strong>Global Rank 70 &bull; CodeChef Starters 189 (Div 3)</strong> &bull; 3-Star at CodeChef &bull; Pupil at Codeforces.
+          </div>
+        </div>
+        <div class="achieve-item">
+          <span class="achieve-icon">🎯</span>
+          <div class="achieve-text">
+            <strong>Winner at Bug Auction &amp; Stellar Quest</strong> &bull; National Finalist at GDG VITM National-level Hackathon.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section id="skills">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-container">
+        <div class="skill-box">
+          <div class="skill-category">Languages</div>
+          <div class="skill-items">C/C++, Python, Java, JavaScript, SQL</div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-category">Developer Tools</div>
+          <div class="skill-items">Git/GitHub, VS Code, Postman, Godbolt, Sollya</div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-category">Frameworks &amp; AI</div>
+          <div class="skill-items">React, Node.js, Tkinter, TailwindCSS, PyTorch</div>
+        </div>
+        <div class="skill-box">
+          <div class="skill-category">Backend &amp; Services</div>
+          <div class="skill-items">Supabase, Gemini API, n8n, Apify, REST APIs</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2 class="section-title">Find Me On</h2>
+      <p class="intro-text">
+        Feel free to reach out for collaborations, compiler discussion, open-source projects, or tech catchups:
+      </p>
+      <div class="contact-links">
+        <a href="mailto:sawantsukumar@gmail.com" class="contact-pill">
+          <span>📧 sawantsukumar@gmail.com</span>
+        </a>
+        <a href="https://linkedin.com/in/sukumar-sawant" target="_blank" rel="noopener" class="contact-pill">
+          <span>💼 LinkedIn</span>
+        </a>
+        <a href="https://github.com/sukumarsawant" target="_blank" rel="noopener" class="contact-pill">
+          <span>🐙 GitHub</span>
+        </a>
+        <a href="https://codechef.com/users/sukumarsawant" target="_blank" rel="noopener" class="contact-pill">
+          <span>⭐ CodeChef</span>
+        </a>
+        <a href="https://codeforces.com/profile/sukumarsawant" target="_blank" rel="noopener" class="contact-pill">
+          <span>📊 Codeforces</span>
+        </a>
+        <a href="resume.html" target="_blank" class="contact-pill">
+          <span>📄 View Resume</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" class="scroll-top" aria-label="Scroll to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-nav">
+      <a href="#about">Home</a>
+      <span>/</span>
+      <a href="#experience">Experience</a>
+      <span>/</span>
+      <a href="#projects">Projects</a>
+      <span>/</span>
+      <a href="#opensource">Open Source</a>
+      <span>/</span>
+      <a href="resume.html" target="_blank">Resume</a>
+      <span>/</span>
+      <a href="https://github.com/sukumarsawant" target="_blank" rel="noopener">GitHub</a>
+      <span>/</span>
+      <a href="https://linkedin.com/in/sukumar-sawant" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="footer-bottom">
+      <span>CC BY-NC-SA 4.0 &nbsp;&bull;&nbsp; &copy; 2026 Sukumar Sawant.</span>
+      <span>Mumbai, India</span>
+    </div>
+  </footer>
+
 </body>
 </html>
-
