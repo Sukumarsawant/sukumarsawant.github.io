@@ -178,10 +178,11 @@ html {
 }
 
 .myPic {
-  width: 220px;
-  height: 220px;
-  border-radius: 20px;
-  object-fit: contain;
+  width: 280px;
+  height: 280px;
+  max-width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
 }
 
 .fieldSection h1 {
