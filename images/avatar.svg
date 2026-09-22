@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" width="280" height="280">
+  <defs>
+    <linearGradient id="avatarBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e24"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </linearGradient>
+    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff5400"/>
+      <stop offset="100%" stop-color="#ff8533"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <!-- Background Card -->
+  <rect width="280" height="280" rx="20" fill="url(#avatarBg)"/>
+  <rect width="280" height="280" rx="20" fill="none" stroke="rgba(255,84,0,0.2)" stroke-width="2"/>
+  
+  <!-- Stylized Tech Hexagon Grid / Circuit Accents -->
+  <circle cx="140" cy="115" r="68" fill="rgba(255, 84, 0, 0.08)" filter="url(#glow)"/>
+  
+  <!-- Monogram & Terminal Elements -->
+  <circle cx="140" cy="115" r="54" fill="#141418" stroke="url(#accentGlow)" stroke-width="2.5"/>
+  <text x="140" y="128" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="-1">SS</text>
+  
+  <!-- Terminal Prompt Badge -->
+  <rect x="50" y="195" width="180" height="42" rx="21" fill="#000000" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+  <circle cx="72" cy="216" r="4" fill="#ff5400"/>
+  <text x="86" y="222" font-family="'SF Mono', Menlo, Monaco, Consolas, monospace" font-size="14" font-weight="600" fill="#a1a1aa">~/sukumar &gt; _</text>
+</svg>
+

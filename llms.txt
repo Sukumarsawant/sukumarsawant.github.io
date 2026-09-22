@@ -1,0 +1,29 @@
+# Sukumar Sawant
+
+> Software Engineer & Systems Enthusiast specializing in Compilers, LLVM, C++, and Applied AI/ML.
+
+- **Name**: Sukumar Sawant
+- **Email**: sawantsukumar@gmail.com
+- **LinkedIn**: https://linkedin.com/in/sukumar-sawant
+- **GitHub**: https://github.com/sukumarsawant
+- **Location**: Mumbai, India
+
+## Summary
+Undergraduate at Vidyalankar Institute of Technology (B.Tech CS, CGPA: 9.8) with minor in AI/ML. Selected as Google Summer of Code (GSoC) 2026 contributor to the LLVM Compiler Infrastructure (LLVM libc). Active open-source reviewer and committer. Winner & runner-up across competitive national hackathons.
+
+## Key Experience
+- **LLVM Compiler Infrastructure** (GSoC 2026 Contributor & Committer):
+  - Enabling software-emulated float80/float128 math support across AArch64, ARM, Windows/MSVC, GPUs.
+  - Implemented and benchmarked higher-order math functions achieving up to 1.5x speedup over native implementations.
+- **Open Source Contributions**:
+  - LLVM libc, Google DeepMind (Erdős problems), Supabase, Mozilla.
+
+## Projects
+- **Nexaware**: Full-stack web job & local business platform (React, Supabase, n8n, Apify, TailwindCSS).
+- **Kuro CLI**: AI voice-controlled assistant (Python, Gemini API, Tkinter, SpeechRecognition).
+
+## Achievements
+- TCS Hackathon 2026 Runner-Up & 2x National Finalist at CodeUnCode'26.
+- 1200+ Competitive Programming problems solved (3-Star CodeChef, Pupil Codeforces).
+- Winner at Bug Auction & Stellar Quest; Finalist at GDG VITM National Hackathon.
+
