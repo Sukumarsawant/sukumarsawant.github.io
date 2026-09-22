@@ -99,7 +99,7 @@ nav {
   text-decoration: none;
   font-size: 14.5px;
   font-weight: 500;
-  transition: color 0.15s ease, opacity 0.15s ease;
+  transition: color 0.15s ease;
 }
 
 .nav-link:hover {
@@ -167,6 +167,10 @@ main {
   color: var(--text-main);
   line-height: 1.75;
   margin-bottom: 24px;
+}
+
+.intro-text strong {
+  color: var(--text-title);
 }
 
 .intro-text a, .prose-link {
