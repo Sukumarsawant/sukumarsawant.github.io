@@ -23,6 +23,24 @@
 .hero:before{z-index:2}.hero-content{z-index:3}.hero-video{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transition:opacity .7s ease;pointer-events:none}.hero.video-ready .hero-video{opacity:1}.japan-scene{z-index:1;transition:opacity .7s ease}.hero.video-ready .japan-scene{opacity:0}
 @media(prefers-reduced-motion:reduce){.hero-video{display:none!important}}
 </style>
+<style>
+/* Carry the pixel-art world through the portfolio with quiet, section-specific landmarks. */
+.section{position:relative;isolation:isolate;overflow:hidden}
+.section:before{content:"";position:absolute;z-index:0;inset:0 0 0 auto;width:min(43%,500px);pointer-events:none;background-repeat:no-repeat;background-position:right center;background-size:auto 78%;opacity:.13;image-rendering:pixelated;mask-image:linear-gradient(90deg,transparent 0%,#000 35%)}
+.section>*{position:relative;z-index:1}
+#experience:before{background-image:url("images/japan/Fuji.png"),url("images/japan/Mountain_Back.png");background-size:auto 76%,auto 67%;background-position:right 18% center,right bottom}
+#projects:before{background-image:url("images/japan/House.png"),url("images/japan/Trees.png");background-size:auto 57%,auto 66%;background-position:right 13% bottom,right bottom}
+#achievements:before{background-image:url("images/japan/Shrine_Single.png"),url("images/japan/BackgroundTrees.png");background-size:auto 72%,auto 75%;background-position:right 17% bottom,right bottom}
+#opensource:before{background-image:url("images/japan/Mountain_Middle.png"),url("images/japan/Trees.png");background-size:auto 67%,auto 60%;background-position:right 10% bottom,right bottom}
+#skills:before{background-image:url("images/japan/Trees.png"),url("images/japan/BackgroundTrees.png");background-size:auto 82%,auto 76%;background-position:right 10% bottom,right bottom}
+#education:before{background-image:url("images/japan/Mountain_Back.png");background-size:auto 68%;background-position:right bottom}
+#contact:before{background-image:url("images/japan/Shrine_Multiple.png"),url("images/japan/BackgroundTrees.png");background-size:auto 77%,auto 68%;background-position:right 8% bottom,right bottom;opacity:.16}
+.section-label{display:flex;align-items:center;gap:8px}
+.section-label:before{content:"";width:6px;height:6px;flex:0 0 6px;background:#ff9d83;box-shadow:4px 0 #ff9d83,0 4px #ff9d83,4px 4px #ff9d83;opacity:.9}
+.project,.feature,.award,.skill-group,.education{background-color:rgba(17,18,20,.94)}
+@media(max-width:760px){.section:before{width:60%;background-size:auto 58%;opacity:.09}#contact:before{opacity:.11}.section>*{z-index:1}}
+@media(prefers-reduced-motion:reduce){.section:before{scroll-behavior:auto}}
+</style>
 </head>
 <body>
 <header class="wrap topbar"><a class="brand" href="#top">@Sukumarsawant <span>(Zorojuro)</span></a><nav class="nav" aria-label="Main navigation"><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#achievements">Achievements</a><a href="#skills">Skills</a><a class="resume" href="sukumar_resume.pdf" target="_blank" rel="noopener">Resume ↗</a><a class="nav-icon" href="https://github.com/sukumarsawant" target="_blank" rel="noopener" aria-label="GitHub profile" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.08c-3.1.67-3.76-1.32-3.76-1.32-.5-1.29-1.24-1.63-1.24-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 1.71 2.61 1.22 3.25.94.1-.72.39-1.22.71-1.5-2.47-.28-5.07-1.24-5.07-5.51 0-1.22.44-2.22 1.15-3-.11-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15a10.6 10.6 0 0 1 5.55 0c2.11-1.45 3.04-1.15 3.04-1.15.61 1.54.23 2.68.12 2.96.72.78 1.14 1.78 1.14 3.02 0 4.28-2.6 5.22-5.08 5.49.4.34.76 1 .76 2.02v3c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg></a><a class="nav-icon" href="rss.xml" aria-label="RSS feed" title="RSS feed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 16.8a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-2-6.1v3.1a6.9 6.9 0 0 1 6.9 6.9h3.1c0-5.5-4.5-10-10-10Zm0-6.2v3.1c7.2 0 13.1 5.9 13.1 13.1h3.1C19.4 11.8 12.1 4.5 3.2 4.5Z"/></svg></a></nav></header>
