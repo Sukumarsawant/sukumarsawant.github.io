@@ -1,0 +1,632 @@
+[
+  {
+    "organization": "f3d-app",
+    "repository": "f3d",
+    "title": "Add color option for normal glyphs attributes",
+    "number": 3343,
+    "url": "https://github.com/f3d-app/f3d/pull/3343"
+  },
+  {
+    "organization": "google-deepmind",
+    "repository": "formal-conjectures",
+    "title": "fix: lower density in Erdős 851",
+    "number": 5364,
+    "url": "https://github.com/google-deepmind/formal-conjectures/pull/5364"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-blog-www",
+    "title": "Add GSoC 2026 blog post for \"Enabling Float80 and Float128 for unsupported targets in LLVM libc\"",
+    "number": 92,
+    "url": "https://github.com/llvm/llvm-blog-www/pull/92"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "F128 test",
+    "number": 200808,
+    "url": "https://github.com/llvm/llvm-project/pull/200808"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Renaming Float128 (DyadicFloat<128>) to DFloat128",
+    "number": 200907,
+    "url": "https://github.com/llvm/llvm-project/pull/200907"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Add compound assignment operator overloads for BFloat16",
+    "number": 201301,
+    "url": "https://github.com/llvm/llvm-project/pull/201301"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc][docs] Fix file path for fputil",
+    "number": 204534,
+    "url": "https://github.com/llvm/llvm-project/pull/204534"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc][docs] updating entrypoints in `add_math_functions.md`",
+    "number": 204700,
+    "url": "https://github.com/llvm/llvm-project/pull/204700"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc][math] Add missing freebsd entrypoint for cbrtf16",
+    "number": 205011,
+    "url": "https://github.com/llvm/llvm-project/pull/205011"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Make BigInt trivially constructible",
+    "number": 206277,
+    "url": "https://github.com/llvm/llvm-project/pull/206277"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Make `ceilf128` use the emulated float128 type ",
+    "number": 206450,
+    "url": "https://github.com/llvm/llvm-project/pull/206450"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Fix buildbot failure for bigint",
+    "number": 207534,
+    "url": "https://github.com/llvm/llvm-project/pull/207534"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Float128 Emulation in LLVM Libc",
+    "number": 207716,
+    "url": "https://github.com/llvm/llvm-project/pull/207716"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Make ceilf128 use the emulated float128 type",
+    "number": 207735,
+    "url": "https://github.com/llvm/llvm-project/pull/207735"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Make sqrtf128 use emulated float128",
+    "number": 207739,
+    "url": "https://github.com/llvm/llvm-project/pull/207739"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Float80 Emulation in LLVM libc",
+    "number": 211350,
+    "url": "https://github.com/llvm/llvm-project/pull/211350"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Fix float128-to-integer conversion UB ",
+    "number": 211593,
+    "url": "https://github.com/llvm/llvm-project/pull/211593"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Add conversion tests between emulated and native f128",
+    "number": 213422,
+    "url": "https://github.com/llvm/llvm-project/pull/213422"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Float80 Emulation in LLVM libc",
+    "number": 214447,
+    "url": "https://github.com/llvm/llvm-project/pull/214447"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Add Operator Overloads for Float80",
+    "number": 214493,
+    "url": "https://github.com/llvm/llvm-project/pull/214493"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Fix hypotbf16 ABI difference Issue",
+    "number": 214966,
+    "url": "https://github.com/llvm/llvm-project/pull/214966"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Make atan2f128 use the emulated float128 type",
+    "number": 214980,
+    "url": "https://github.com/llvm/llvm-project/pull/214980"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Fix Atan2f128 and add tests for all versions",
+    "number": 215023,
+    "url": "https://github.com/llvm/llvm-project/pull/215023"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc][NFC] Replace `LIBC_TYPES_HAS_FLOAT128` with `LIBC_TYPES_HAS_NATIVE_FLOAT128`",
+    "number": 215605,
+    "url": "https://github.com/llvm/llvm-project/pull/215605"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Add `NEED_MPFR_F128` argument to add_fp_unittest.",
+    "number": 215657,
+    "url": "https://github.com/llvm/llvm-project/pull/215657"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Make sqrtf128 use emulated float128",
+    "number": 216500,
+    "url": "https://github.com/llvm/llvm-project/pull/216500"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Modify `atan2f128` to use emulated Float128 type ",
+    "number": 216508,
+    "url": "https://github.com/llvm/llvm-project/pull/216508"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Modify `floorf128` to use emulated Float128 type",
+    "number": 216552,
+    "url": "https://github.com/llvm/llvm-project/pull/216552"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Modify `truncf128` to use emulated Float128 type",
+    "number": 216560,
+    "url": "https://github.com/llvm/llvm-project/pull/216560"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Modify `roundf128` to use emulated Float128 type",
+    "number": 216563,
+    "url": "https://github.com/llvm/llvm-project/pull/216563"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Modify `roundevenf128` to use emulated Float128 type",
+    "number": 216568,
+    "url": "https://github.com/llvm/llvm-project/pull/216568"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Modify `fmaxf128` and `fminf128` to use emulated Float128 type ",
+    "number": 216575,
+    "url": "https://github.com/llvm/llvm-project/pull/216575"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Modify `fromfpf128`, `fromfpxf128`, `ufromfpf128` and `ufromfpxf128` to use emulated Float128 type ",
+    "number": 216578,
+    "url": "https://github.com/llvm/llvm-project/pull/216578"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Make bf16 arithmetic function family use the emulated float128 type",
+    "number": 216823,
+    "url": "https://github.com/llvm/llvm-project/pull/216823"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Make `lroundf128` and `llroundf128` use the emulated float128 type",
+    "number": 216829,
+    "url": "https://github.com/llvm/llvm-project/pull/216829"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Modify nearbyintf128 to use emulated Float128 type ",
+    "number": 217025,
+    "url": "https://github.com/llvm/llvm-project/pull/217025"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Modify `rint` functions to use emulated Float128 type",
+    "number": 217070,
+    "url": "https://github.com/llvm/llvm-project/pull/217070"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[bazel][libc] Removes the unused dependency for `floorf128` ",
+    "number": 217117,
+    "url": "https://github.com/llvm/llvm-project/pull/217117"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Make classification functions use the emulated float128 type",
+    "number": 217134,
+    "url": "https://github.com/llvm/llvm-project/pull/217134"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Fix add_sub for Emulated Types",
+    "number": 217344,
+    "url": "https://github.com/llvm/llvm-project/pull/217344"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Make sign functions use the emulated float128 type ",
+    "number": 217389,
+    "url": "https://github.com/llvm/llvm-project/pull/217389"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Make fmaximum/fminimum functions use the emulated float128 type",
+    "number": 217390,
+    "url": "https://github.com/llvm/llvm-project/pull/217390"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Make fmaximum_num/fminimum_num functions use the emulated float128 type",
+    "number": 217409,
+    "url": "https://github.com/llvm/llvm-project/pull/217409"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Make fmaximum_mag/fminimum_mag functions use the emulated float128 type",
+    "number": 217539,
+    "url": "https://github.com/llvm/llvm-project/pull/217539"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Make fmaximum_mag_num/fminimum_mag_num functions use the emulated float128 type",
+    "number": 217549,
+    "url": "https://github.com/llvm/llvm-project/pull/217549"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Make `fdimf128` use the emulated float128 type",
+    "number": 217567,
+    "url": "https://github.com/llvm/llvm-project/pull/217567"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Make next-type functions use the emulated float128 type",
+    "number": 217575,
+    "url": "https://github.com/llvm/llvm-project/pull/217575"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Make remainder functions use the emulated float128 type",
+    "number": 217578,
+    "url": "https://github.com/llvm/llvm-project/pull/217578"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Clean up copt naming  ",
+    "number": 218230,
+    "url": "https://github.com/llvm/llvm-project/pull/218230"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Add arithmetic float80 functions",
+    "number": 219718,
+    "url": "https://github.com/llvm/llvm-project/pull/219718"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc][math] Fix `quick_add`  incorrect exponent",
+    "number": 220374,
+    "url": "https://github.com/llvm/llvm-project/pull/220374"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc][WIP] Add guard for bfloat16 type",
+    "number": 221327,
+    "url": "https://github.com/llvm/llvm-project/pull/221327"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Enable Float80-type for x86_32",
+    "number": 221408,
+    "url": "https://github.com/llvm/llvm-project/pull/221408"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Make setpayloadsig functions constexpr",
+    "number": 223497,
+    "url": "https://github.com/llvm/llvm-project/pull/223497"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Make bf16sub functions constexpr",
+    "number": 223506,
+    "url": "https://github.com/llvm/llvm-project/pull/223506"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc][docs] Add doc change for bazel",
+    "number": 223746,
+    "url": "https://github.com/llvm/llvm-project/pull/223746"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Enables MPFR for float80 and adds tests for it",
+    "number": 223800,
+    "url": "https://github.com/llvm/llvm-project/pull/223800"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Make sign functions use the emulated float80 type ",
+    "number": 235073,
+    "url": "https://github.com/llvm/llvm-project/pull/235073"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Add fmax/fmin functions for float80 type",
+    "number": 236387,
+    "url": "https://github.com/llvm/llvm-project/pull/236387"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Add fmaximum/fminimum functions for float80 type",
+    "number": 236393,
+    "url": "https://github.com/llvm/llvm-project/pull/236393"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Add fmaximum_num/fminimum_num functions for float80 type",
+    "number": 236401,
+    "url": "https://github.com/llvm/llvm-project/pull/236401"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Add fmaximum_mag/fminimum_mag functions for float80 type ",
+    "number": 236411,
+    "url": "https://github.com/llvm/llvm-project/pull/236411"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Add fmaximum_mag_num/fminimum_mag_num functions for float80 type",
+    "number": 236415,
+    "url": "https://github.com/llvm/llvm-project/pull/236415"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Add fdim functions for float80 type",
+    "number": 236417,
+    "url": "https://github.com/llvm/llvm-project/pull/236417"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc][docs] Update `index.md` for float80 and double_double functions",
+    "number": 236675,
+    "url": "https://github.com/llvm/llvm-project/pull/236675"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Add sukumarsawant as maintainer for Math",
+    "number": 238008,
+    "url": "https://github.com/llvm/llvm-project/pull/238008"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc] Add missing favicon for LLVM libc website ",
+    "number": 238494,
+    "url": "https://github.com/llvm/llvm-project/pull/238494"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc][math] Adds total ordering functions for float80",
+    "number": 238685,
+    "url": "https://github.com/llvm/llvm-project/pull/238685"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc][math] Adds classification functions for float80",
+    "number": 238686,
+    "url": "https://github.com/llvm/llvm-project/pull/238686"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc][math] Adds exponent decomposition functions for float80",
+    "number": 238687,
+    "url": "https://github.com/llvm/llvm-project/pull/238687"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc][math] Adds exponent scaling functions for float80",
+    "number": 238688,
+    "url": "https://github.com/llvm/llvm-project/pull/238688"
+  },
+  {
+    "organization": "llvm",
+    "repository": "llvm-project",
+    "title": "[libc][math] Adds mantissa manipulation functions for float80",
+    "number": 238689,
+    "url": "https://github.com/llvm/llvm-project/pull/238689"
+  },
+  {
+    "organization": "mozilla-mobile",
+    "repository": "mozilla-vpn-client",
+    "title": "Add missing asterick for important fields in contact form",
+    "number": 11339,
+    "url": "https://github.com/mozilla-mobile/mozilla-vpn-client/pull/11339"
+  },
+  {
+    "organization": "Nano-Collective",
+    "repository": "nanocoder",
+    "title": "Adds \"done and save\" shortcut while selecting more models",
+    "number": 562,
+    "url": "https://github.com/Nano-Collective/nanocoder/pull/562"
+  },
+  {
+    "organization": "ni5arga",
+    "repository": "deanonymizer",
+    "title": "Add Anthropic tests in `anthropic.test.ts`",
+    "number": 10,
+    "url": "https://github.com/ni5arga/deanonymizer/pull/10"
+  },
+  {
+    "organization": "ni5arga",
+    "repository": "deanonymizer",
+    "title": "Adds `.env.example` in the project",
+    "number": 13,
+    "url": "https://github.com/ni5arga/deanonymizer/pull/13"
+  },
+  {
+    "organization": "ni5arga",
+    "repository": "deanonymizer",
+    "title": "[CI] Add github CI workflow",
+    "number": 8,
+    "url": "https://github.com/ni5arga/deanonymizer/pull/8"
+  },
+  {
+    "organization": "Sukumarsawant",
+    "repository": "deanonymization-tool",
+    "title": "Clarify scope for “web design lab project” issue before implementation",
+    "number": 1,
+    "url": "https://github.com/Sukumarsawant/deanonymization-tool/pull/1"
+  },
+  {
+    "organization": "Sukumarsawant",
+    "repository": "f3d",
+    "title": "add color option for normal glyph",
+    "number": 1,
+    "url": "https://github.com/Sukumarsawant/f3d/pull/1"
+  },
+  {
+    "organization": "Sukumarsawant",
+    "repository": "formal-conjectures",
+    "title": "replace the natural density",
+    "number": 1,
+    "url": "https://github.com/Sukumarsawant/formal-conjectures/pull/1"
+  },
+  {
+    "organization": "Sukumarsawant",
+    "repository": "llvm-project",
+    "title": "F128 test",
+    "number": 30,
+    "url": "https://github.com/Sukumarsawant/llvm-project/pull/30"
+  },
+  {
+    "organization": "Sukumarsawant",
+    "repository": "llvm-project",
+    "title": "buildbot -> CI",
+    "number": 31,
+    "url": "https://github.com/Sukumarsawant/llvm-project/pull/31"
+  },
+  {
+    "organization": "Sukumarsawant",
+    "repository": "mozilla-vpn-client",
+    "title": "Asterick",
+    "number": 1,
+    "url": "https://github.com/Sukumarsawant/mozilla-vpn-client/pull/1"
+  },
+  {
+    "organization": "Sukumarsawant",
+    "repository": "supabase",
+    "title": "fix and update hindi doc",
+    "number": 1,
+    "url": "https://github.com/Sukumarsawant/supabase/pull/1"
+  },
+  {
+    "organization": "supabase",
+    "repository": "realtime",
+    "title": "docs: fix nits in `ERROR_CODES.md`",
+    "number": 1943,
+    "url": "https://github.com/supabase/realtime/pull/1943"
+  },
+  {
+    "organization": "supabase",
+    "repository": "supabase",
+    "title": "docs: updating hindi translation for `readme.hi`",
+    "number": 46711,
+    "url": "https://github.com/supabase/supabase/pull/46711"
+  },
+  {
+    "organization": "SwiftByte6",
+    "repository": "sih26",
+    "title": "feat: add drag feature in map ",
+    "number": 15,
+    "url": "https://github.com/SwiftByte6/sih26/pull/15"
+  },
+  {
+    "organization": "SwiftByte6",
+    "repository": "sih26",
+    "title": "feat: add CI checks",
+    "number": 17,
+    "url": "https://github.com/SwiftByte6/sih26/pull/17"
+  },
+  {
+    "organization": "tentse",
+    "repository": "themecp-frontend-v2",
+    "title": "[fix] Replace wrong links in footer",
+    "number": 11,
+    "url": "https://github.com/tentse/themecp-frontend-v2/pull/11"
+  },
+  {
+    "organization": "voss-labs",
+    "repository": "first-contributions",
+    "title": "feat: add sukumarsawant to contributors list",
+    "number": 24,
+    "url": "https://github.com/voss-labs/first-contributions/pull/24"
+  }
+]
