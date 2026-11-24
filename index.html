@@ -61,7 +61,7 @@
 <article class="award"><div class="meta">Hackathons</div><h3>Runner-up · TCS Hackathon 2026</h3><p>Two-time CodeUnCode ’26 national finalist among 1,200+ participants; national finalist at the GDG VITM hackathon; winner of Bug Auction and Stellar Quest.</p></article>
 <article class="award"><div class="meta">Contest results</div><h3>CodeChef 3★ · Codeforces Pupil</h3><p>Placed 70th globally in CodeChef Starters 189 (Division 3).</p></article>
 </div></section>
-<section class="section" id="opensource"><div class="section-head"><div><p class="section-label">04 / Open source</p><h2>Open-source contributions.</h2></div><p class="section-intro">Selected contributions, grouped by organization. Filter by category or sort by repository stars and PR count.</p></div><div class="contribution-tools"><div class="contribution-filter-block"><span class="control-label">Filter</span><div id="orgFilters" class="filter-row" aria-label="Filter contributions by category"></div></div><div class="contribution-filter-block"><span class="control-label">Sort by</span><div id="contributionSort" class="filter-row" aria-label="Sort contributions"><button class="filter-btn" data-sort="category" aria-pressed="true">Category</button><button class="filter-btn" data-sort="stars" aria-pressed="false">Stars</button><button class="filter-btn" data-sort="prs" aria-pressed="false">PRs</button></div></div><p class="contribution-count" id="contributionCount" aria-live="polite">Loading merged and closed contributions…</p></div><div class="contribution-list" id="contributionList"></div></section>
+<section class="section" id="opensource"><div class="section-head"><div><p class="section-label">04 / Open source</p><h2>Open-source contributions.</h2></div><p class="section-intro">Selected repositories, grouped by organization.</p></div><div class="contribution-tools"><div class="contribution-filter-block"><span class="control-label">Sort by</span><div id="contributionSort" class="filter-row" aria-label="Sort contributions"><button class="filter-btn" data-sort="category" aria-pressed="true">Category</button><button class="filter-btn" data-sort="stars" aria-pressed="false">Stars</button><button class="filter-btn" data-sort="prs" aria-pressed="false">PRs</button></div></div><p class="contribution-count" id="contributionCount" aria-live="polite">Loading contributions…</p></div><div class="contribution-list" id="contributionList"></div></section>
 <section class="section" id="skills"><div class="section-head"><div><p class="section-label">05 / Relevant skills</p><h2>Technical toolkit.</h2></div><p class="section-intro">Skills selected for systems, compiler, and applied AI engineering roles.</p></div><div class="skills"><article class="skill-group"><h3>Languages</h3><p>C/C++ · Python · Java · JavaScript · SQL</p></article><article class="skill-group"><h3>Systems &amp; numerical software</h3><p>LLVM libc · compiler infrastructure · floating-point arithmetic · IEEE 754 · testing &amp; benchmarking</p></article><article class="skill-group"><h3>AI &amp; data systems</h3><p>RAG · LangGraph · FastAPI · PostgreSQL · pgvector · Docker · PyTorch · TensorFlow</p></article></div></section>
 <section class="section" id="education"><div class="section-head"><div><p class="section-label">06 / Education</p><h2>Education.</h2></div></div><article class="education"><div><h3>Bachelor of Technology · Computer Science</h3><p>Minor in Artificial Intelligence &amp; Machine Learning</p></div><div class="meta">University of Mumbai · 2024–2028</div></article></section>
 <section class="section contact" id="contact"><div><p class="section-label">07 / Contact</p><h2>Let’s talk engineering.</h2><p>For systems, compiler, open-source, and software engineering opportunities.</p></div><div class="contact-links"><a class="button primary" href="mailto:sawantsukumar@gmail.com">sawantsukumar@gmail.com ↗</a><a class="button" href="tel:+918850544772">+91 88505 44772</a><a class="button" href="https://linkedin.com/in/sukumar-sawant" target="_blank" rel="noopener">LinkedIn ↗</a></div></section>
@@ -70,11 +70,9 @@
 <script>
 (() => {
   const list = document.getElementById('contributionList');
-  const orgFilters = document.getElementById('orgFilters');
   const sortControls = document.getElementById('contributionSort');
   const count = document.getElementById('contributionCount');
   let contributions = [];
-  let selectedCategory = 'all';
   let sortBy = 'category';
   const starsByRepository = new Map();
   const descriptionsByRepository = new Map();
@@ -90,36 +88,27 @@
   const categoryOrder = Object.keys(categoryInfo);
   const categoryFor = (item) => categoryOrder.find((category) => categoryInfo[category].repos.includes(`${item.organization}/${item.repository}`));
   const formatStars = (value) => value == null ? '' : `${new Intl.NumberFormat('en',{notation:'compact',maximumFractionDigits:1}).format(value)} stars`;
-  function drawFilters() {
-    const totals = new Map(categoryOrder.map((category) => [category,0]));
-    contributions.forEach((item) => { const category = categoryFor(item); if (category) totals.set(category,totals.get(category)+1); });
-    const categories = categoryOrder.filter((category) => totals.get(category));
-    orgFilters.innerHTML = `<button class="filter-btn" data-category="all" aria-pressed="${selectedCategory === 'all'}">All <span class="filter-count">${contributions.length}</span></button>` + categories.map((category) => `<button class="filter-btn" data-category="${escapeHtml(category)}" aria-pressed="${selectedCategory === category}">${escapeHtml(category)} <span class="filter-count">${totals.get(category)}</span></button>`).join('');
-    orgFilters.querySelectorAll('[data-category]').forEach((button) => button.addEventListener('click', () => { selectedCategory = button.dataset.category; drawFilters(); drawList(); }));
-  }
   function drawList() {
-    const filtered = contributions.filter((item) => selectedCategory === 'all' || categoryFor(item) === selectedCategory);
+    const filtered = contributions;
     const repositories = new Map();
     filtered.forEach((item) => {
       const key = `${item.organization}/${item.repository}`;
-      if (!repositories.has(key)) repositories.set(key, {organization:item.organization,repository:item.repository,total:0,merged:0,category:categoryFor(item),stars:starsByRepository.get(key) ?? null,url:`https://github.com/${item.organization}/${item.repository}/pulls?q=is%3Apr+author%3Asukumarsawant+state%3Aclosed`});
-      const repo = repositories.get(key); repo.total += 1; if (item.merged) repo.merged += 1;
+      if (!repositories.has(key)) repositories.set(key, {organization:item.organization,repository:item.repository,total:0,category:categoryFor(item),stars:starsByRepository.get(key) ?? null});
+      const repo = repositories.get(key); repo.total += 1;
     });
     const cards = [...repositories.values()].sort((a,b) => sortBy === 'stars' ? (b.stars ?? -1)-(a.stars ?? -1) || b.total-a.total : sortBy === 'prs' ? b.total-a.total || (b.stars ?? -1)-(a.stars ?? -1) : categoryOrder.indexOf(a.category)-categoryOrder.indexOf(b.category) || b.total-a.total || a.repository.localeCompare(b.repository));
-    const mergedTotal = filtered.filter((item) => item.merged).length;
-    count.textContent = `${filtered.length} closed pull requests across ${new Set(filtered.map((item) => item.organization)).size} organizations · ${mergedTotal} merged`;
+    count.textContent = `${repositories.size} repositories · ${filtered.length} pull requests`;
     const groups = categoryOrder.map((category) => ({category,repositories:cards.filter((repo) => repo.category === category)})).filter((group) => group.repositories.length);
     list.innerHTML = groups.map(({category,repositories:groupRepos}) => {
       const info = categoryInfo[category];
-      const total = groupRepos.reduce((sum,repo) => sum + repo.total,0);
       const mark = info.logo ? `<img src="${info.logo}" alt="${escapeHtml(category)} logo">` : `<span class="contribution-group-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.08c-3.1.67-3.76-1.32-3.76-1.32-.5-1.29-1.24-1.63-1.24-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 1.71 2.61 1.22 3.25.94.1-.72.39-1.22.71-1.5-2.47-.28-5.07-1.24-5.07-5.51 0-1.22.44-2.22 1.15-3-.11-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15a10.6 10.6 0 0 1 5.55 0c2.11-1.45 3.04-1.15 3.04-1.15.61 1.54.23 2.68.12 2.96.72.78 1.14 1.78 1.14 3.02 0 4.28-2.6 5.22-5.08 5.49.4.34.76 1 .76 2.02v3c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg></span>`;
       const groupCards = groupRepos.map((repo) => {
         const key = `${repo.organization}/${repo.repository}`;
-        const description = descriptionsByRepository.get(key) || 'View this repository on GitHub.';
+        const description = descriptionsByRepository.get(key) || '';
         const stars = formatStars(repo.stars);
-        return `<article class="contribution-entry"><div class="contribution-entry-main"><a class="contribution-entry-title" href="https://github.com/${escapeHtml(key)}" target="_blank" rel="noopener">${escapeHtml(key)} ↗</a><p class="contribution-entry-description">${escapeHtml(description)}</p></div><div class="contribution-entry-metrics"><span>${repo.total} ${repo.total === 1 ? 'PR' : 'PRs'}</span><span>${repo.merged} merged</span><span>${repo.total-repo.merged} closed · not merged</span>${stars ? `<span class="repo-stars">${escapeHtml(stars)}</span>` : ''}</div></article>`;
+        return `<article class="contribution-entry"><div class="contribution-entry-main"><a class="contribution-entry-title" href="https://github.com/${escapeHtml(key)}" target="_blank" rel="noopener">${escapeHtml(key)} ↗</a>${description ? `<p class="contribution-entry-description">${escapeHtml(description)}</p>` : ''}</div><div class="contribution-entry-metrics"><span>${repo.total} ${repo.total === 1 ? 'PR' : 'PRs'}</span>${stars ? `<span class="repo-stars">${escapeHtml(stars)}</span>` : ''}</div></article>`;
       }).join('');
-      return `<section class="contribution-group"><header class="contribution-group-head">${mark}<h3 class="contribution-group-title">${escapeHtml(category)}</h3><span class="contribution-group-meta">${groupRepos.length} ${groupRepos.length === 1 ? 'repository' : 'repositories'} · ${total} PRs</span></header><div class="contribution-repo-list">${groupCards}</div></section>`;
+      return `<section class="contribution-group"><header class="contribution-group-head">${mark}<h3 class="contribution-group-title">${escapeHtml(category)}</h3></header><div class="contribution-repo-list">${groupCards}</div></section>`;
     }).join('') || '<p class="contribution-count">No repositories match this filter.</p>';
   }
   sortControls.querySelectorAll('[data-sort]').forEach((button) => button.addEventListener('click', () => { sortBy = button.dataset.sort; sortControls.querySelectorAll('[data-sort]').forEach((choice) => choice.setAttribute('aria-pressed',String(choice === button))); drawList(); }));
@@ -152,13 +141,13 @@
         if (page * 100 >= data.total_count) break;
       }
       contributions = keepSelected(all.map((item) => { const parts = item.repository_url.replace('https://api.github.com/repos/','').split('/'); return {organization:parts[0],repository:parts[1],title:item.title,url:item.html_url,state:item.state,merged:Boolean(item.pull_request?.merged_at)}; }));
-      drawFilters(); drawList();
+      drawList();
       loadStars();
     } catch (error) {
       count.textContent = `${contributions.length} pull requests in the local snapshot · GitHub live refresh is temporarily unavailable`;
     }
   }
-  fetch('contributions.json').then((r) => r.json()).then((data) => { contributions = keepSelected(data.filter((item) => item.state === 'closed').map((item) => ({...item}))); drawFilters(); drawList(); loadStars(); syncGitHub(); }).catch(() => { count.textContent = 'Could not load the contribution snapshot.'; syncGitHub(); });
+  fetch('contributions.json').then((r) => r.json()).then((data) => { contributions = keepSelected(data.filter((item) => item.state === 'closed').map((item) => ({...item}))); drawList(); loadStars(); syncGitHub(); }).catch(() => { count.textContent = 'Could not load the contribution snapshot.'; syncGitHub(); });
 })();
 </script>
 <script>
