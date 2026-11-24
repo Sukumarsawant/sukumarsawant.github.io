@@ -58,7 +58,7 @@
 <article class="award"><div class="meta">Hackathons</div><h3>Runner-up · TCS Hackathon 2026</h3><p>Two-time CodeUnCode ’26 national finalist among 1,200+ participants; national finalist at the GDG VITM hackathon; winner of Bug Auction and Stellar Quest.</p></article>
 <article class="award"><div class="meta">Contest results</div><h3>CodeChef 3★ · Codeforces Pupil</h3><p>Placed 70th globally in CodeChef Starters 189 (Division 3).</p></article>
 </div></section>
-<section class="section" id="opensource"><div class="section-head"><div><p class="section-label">04 / Open source</p><h2>Open-source work by organization.</h2></div><p class="section-intro">Closed pull requests only. Choose an organization to browse its repositories and contribution counts.</p></div><div class="contribution-tools"><input id="contributionSearch" class="contribution-search" type="search" placeholder="Filter organizations or repositories…" aria-label="Filter organizations or repositories"><div id="orgFilters" class="filter-row" aria-label="Filter by organization"></div><p class="contribution-count" id="contributionCount" aria-live="polite">Loading merged and closed contributions…</p></div><div class="contribution-list" id="contributionList"></div><div class="inline-proof"><a class="plain-link" href="https://github.com/search?q=author%3Asukumarsawant+is%3Apr+state%3Aclosed&amp;type=pullrequests" target="_blank" rel="noopener">Open all closed GitHub pull requests ↗</a></div></section>
+<section class="section" id="opensource"><div class="section-head"><div><p class="section-label">04 / Open source</p><h2>Open-source work by organization.</h2></div><p class="section-intro">Selected organizations · closed pull requests only. Filter by organization to browse contribution counts.</p></div><div class="contribution-tools"><input id="contributionSearch" class="contribution-search" type="search" placeholder="Filter organizations or repositories…" aria-label="Filter organizations or repositories"><div id="orgFilters" class="filter-row" aria-label="Filter by organization"></div><p class="contribution-count" id="contributionCount" aria-live="polite">Loading merged and closed contributions…</p></div><div class="contribution-list" id="contributionList"></div></section>
 <section class="section" id="skills"><div class="section-head"><div><p class="section-label">05 / Relevant skills</p><h2>Technical toolkit.</h2></div><p class="section-intro">Skills selected for systems, compiler, and applied AI engineering roles.</p></div><div class="skills"><article class="skill-group"><h3>Languages</h3><p>C/C++ · Python · Java · JavaScript · SQL</p></article><article class="skill-group"><h3>Systems &amp; numerical software</h3><p>LLVM libc · compiler infrastructure · floating-point arithmetic · IEEE 754 · testing &amp; benchmarking</p></article><article class="skill-group"><h3>AI &amp; data systems</h3><p>RAG · LangGraph · FastAPI · PostgreSQL · pgvector · Docker · PyTorch · TensorFlow</p></article></div></section>
 <section class="section" id="education"><div class="section-head"><div><p class="section-label">06 / Education</p><h2>Education.</h2></div></div><article class="education"><div><h3>Bachelor of Technology · Computer Science</h3><p>Minor in Artificial Intelligence &amp; Machine Learning</p></div><div class="meta">University of Mumbai · 2024–2028</div></article></section>
 <section class="section contact" id="contact"><div><p class="section-label">07 / Contact</p><h2>Let’s talk engineering.</h2><p>For systems, compiler, open-source, and software engineering opportunities.</p></div><div class="contact-links"><a class="button primary" href="mailto:sawantsukumar@gmail.com">sawantsukumar@gmail.com ↗</a><a class="button" href="tel:+918850544772">+91 88505 44772</a><a class="button" href="https://linkedin.com/in/sukumar-sawant" target="_blank" rel="noopener">LinkedIn ↗</a></div></section>
@@ -73,6 +73,8 @@
   let contributions = [];
   let selectedOrg = 'all';
   const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const includedRepositories = new Set(['llvm/llvm-project','ni5arga/deanonymizer','f3d-app/f3d','google-deepmind/formal-conjectures','llvm/llvm-blog-www','mozilla-mobile/mozilla-vpn-client','Nano-Collective/nanocoder','supabase/realtime','supabase/supabase','tentse/themecp-frontend-v2']);
+  const keepSelected = (items) => items.filter((item) => includedRepositories.has(`${item.organization}/${item.repository}`));
   function drawFilters() {
     const totals = new Map();
     contributions.forEach((item) => totals.set(item.organization, (totals.get(item.organization) || 0) + 1));
@@ -105,13 +107,13 @@
         all.push(...data.items);
         if (page * 100 >= data.total_count) break;
       }
-      contributions = all.map((item) => { const parts = item.repository_url.replace('https://api.github.com/repos/','').split('/'); return {organization:parts[0],repository:parts[1],title:item.title,url:item.html_url,state:item.state,merged:Boolean(item.pull_request?.merged_at)}; });
+      contributions = keepSelected(all.map((item) => { const parts = item.repository_url.replace('https://api.github.com/repos/','').split('/'); return {organization:parts[0],repository:parts[1],title:item.title,url:item.html_url,state:item.state,merged:Boolean(item.pull_request?.merged_at)}; }));
       drawFilters(); drawList();
     } catch (error) {
       count.textContent = `${contributions.length} pull requests in the local snapshot · GitHub live refresh is temporarily unavailable`;
     }
   }
-  fetch('contributions.json').then((r) => r.json()).then((data) => { contributions = data.filter((item) => item.state === 'closed').map((item) => ({...item})); drawFilters(); drawList(); syncGitHub(); }).catch(() => { count.textContent = 'Could not load the contribution snapshot.'; syncGitHub(); });
+  fetch('contributions.json').then((r) => r.json()).then((data) => { contributions = keepSelected(data.filter((item) => item.state === 'closed').map((item) => ({...item}))); drawFilters(); drawList(); syncGitHub(); }).catch(() => { count.textContent = 'Could not load the contribution snapshot.'; syncGitHub(); });
 })();
 </script>
 <script>
